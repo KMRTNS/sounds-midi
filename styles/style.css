@@ -1,0 +1,67 @@
+:root {
+  --color-gray: #595959;
+  --color-gray-dark: #2d2c2c;
+  --color-gray-light: #aaa;
+  --color-white: #fff;
+  --light: rgb(65, 68, 38);
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(45deg, #a7cfdf 0%,black 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--color-white);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.keyboard {
+  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  border-radius: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.key {
+  background-color: var(--color-white);
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 var(--color-gray-light);
+  color: var(--color-gray);
+  cursor: pointer;
+  height: 120px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 120px;
+}
+
+.key.active,
+.key:active {
+  background-color: var(--color-gray);
+  border: 4px solid  var(--color-gray);
+  box-shadow: 3px 3px 0 var(--color-gray-dark) inset;
+  color: var(--color-white);
+  outline: none;
+}
+
+.key.focus,
+.key:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px var(--light);
+}
+
+.key.active:focus,
+.key:active:focus {
+  box-shadow: 3px 3px 0 var(--color-gray-dark) inset, 1px 1px 10px var(--light);
+}
